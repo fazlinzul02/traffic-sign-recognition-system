@@ -37,27 +37,26 @@ traffic-sign-recognition-system/
     ├── live.html           # Live camera detection interface
     └── how.html            # User guide / how-to-use page
 
-# How to Use: Traffic Sign Detection & Recognition System (TSDR)
+INSTALLATION (FIRST-TIME SETUP)
+-------------------------------
+Step 1: Open Anaconda Prompt or Terminal and navigate to the project folder:
+    cd path\to\traffic-sign-recognition-system
 
-This guide explains how to set up, run, and use the TSDR web application with your camera feed.
+Step 2: Create and activate the Conda environment:
+    conda create -n tsdr_env python=3.10 -y
+    conda activate tsdr_env
 
----
+Step 3: Install required packages:
+    pip install -r requirements.txt
 
-## Before You Start
+RUNNING THE SYSTEM
+------------------
+Step 1: Activate your environment (if not already active):
+    conda activate tsdr_env
 
-Make sure you have:
-- A working camera connected to your device (default camera index `0`).
-- No other application (such as Zoom, Teams, or another camera app) currently locking the camera.
-- Your environment (`tsdr_env`) set up with dependencies installed from `requirements.txt`.
-- Your trained model weights placed at `weights/best.pt`.
+Step 2: Start the Flask server:
+    python app.py
 
----
+Step 3: Open your web browser and visit:
+    http://127.0.0.1:5000
 
-## Step-by-Step Guide
-
-### 1. Activate Your Environment and Start the Server
-Open your terminal or Anaconda Prompt inside the project folder (`traffic-sign-recognition-system`), activate your environment, and run `app.py`:
-
-```bash
-conda activate tsdr_env
-python app.py
