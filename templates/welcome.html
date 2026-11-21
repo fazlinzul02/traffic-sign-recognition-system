@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Welcome | TSDR System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    height: 100vh;
+    background: linear-gradient(rgba(15, 23, 42, 0), rgba(15, 23, 42, 0.3)), 
+                url("/static/welcome.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .box {
+    text-align: center;
+    padding: 30px 35px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    max-width: 500px; 
+    width: 85%;
+    margin-top: 12px; 
+  }
+
+  p {
+    font-size: 14px;
+    color: #f8fafc;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    text-align: justify; 
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .btn-start {
+    background: #2563eb;
+    color: white;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  }
+
+  .btn-start:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+  }
+
+  .btn-how {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-how:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  footer {
+    position: absolute;
+    bottom: 20px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <div class="box">
+    <p>
+      This Traffic Sign Recognition System is a real-time web application that detects and 
+	  recognizes traffic signs using a live camera feed. Powered by a YOLOv11 deep learning model, 
+	  the system identifies traffic signs instantly and displays accurate detection results to 
+	  support intelligent transportation and road safety applications.
+    </p>
+    <div class="btn-group">
+      <button class="btn-start" onclick="window.location.href='/live'">Start Detection</button>
+      <button class="btn-how" onclick="window.location.href='/how'">How To Use</button>
+    </div>
+  </div>
+
+  <footer>
+    Programmed by FAZLIN ZULKIFLEE
+  </footer>
+</body>
+</html>
